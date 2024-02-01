@@ -1,0 +1,14 @@
+README.md
+setup.py
+src/DS_EXERCISE9/__init__.py
+src/DS_EXERCISE9/analysis/__init__.py
+src/DS_EXERCISE9/analysis/analysis_tools.py
+src/DS_EXERCISE9/data/__init__.py
+src/DS_EXERCISE9/data/data_tools.py
+src/DS_EXERCISE9/plotting/__init__.py
+src/DS_EXERCISE9/plotting/plotting_tools.py
+src/DS_Exercise9.egg-info/PKG-INFO
+src/DS_Exercise9.egg-info/SOURCES.txt
+src/DS_Exercise9.egg-info/dependency_links.txt
+src/DS_Exercise9.egg-info/requires.txt
+src/DS_Exercise9.egg-info/top_level.txt
