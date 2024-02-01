@@ -1,1 +1,1 @@
-from .data_tools.py import generate_data
+from .data_tools import generate_data

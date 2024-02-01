@@ -1,1 +1,1 @@
-from .plotting_tools.py import plot_analysis
+from .plotting_tools import plot_analysis

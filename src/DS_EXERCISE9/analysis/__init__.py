@@ -1,1 +1,1 @@
-from .analysis_tools.py import analyse_data
+from .analysis_tools import analyse_data
