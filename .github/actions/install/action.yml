@@ -1,0 +1,10 @@
+name: 'Install DS_EXERCISE9'
+description: 'Installs DS_EXERCISE9'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install package
+      run: |
+        pip install .
+      shell: bash
