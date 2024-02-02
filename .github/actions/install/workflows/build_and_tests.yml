@@ -1,0 +1,36 @@
+# This is a simple workflow to run unit tests
+name: Build
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push and PRs
+  push:
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  build-matrix:
+    name: Install package and run Unit tests
+    runs-on: ubuntu-latest
+    strategy:
+     matrix:
+        python-version: [3.8]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package
+        uses: ./.github/actions/install
+      - name: Install pytest
+        run: pip install pytest
+      - name: Run unit tests and generate coverage report
+        run: |
+         set -o pipefail  # To propagate exit code from pytest
+         pytest tests/*
